@@ -15,7 +15,7 @@ let tampermonkey_script_base_format=function(data){
         }
 	})
 	return objs
-}
+};
 let tampermonkey_script_base_do=function(data, batch, before, after){
 	//before
     let batch_step=GM_getValue("yp_cp_batch_do")
@@ -58,7 +58,8 @@ let tampermonkey_script_base_do=function(data, batch, before, after){
         GM_deleteValue("yp_cp_batch_do")
         GM_deleteValue("data")
 	}
-}
+};
+
 let tampermonkey_script_base_init=function(batch, before, after) {
     let data=GM_getValue('data');
     let doing=GM_getValue("yp_cp_batch_do")
@@ -108,4 +109,4 @@ let tampermonkey_script_base_init=function(batch, before, after) {
 		$('#yp_terminal').append(logs.join(""))
 		tampermonkey_script_base_do(data, batch, before, after)
 	}
-}
+};
